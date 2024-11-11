@@ -3,7 +3,7 @@
 */ 
 
 
-public class Policy { 
+public class PolicyUpdated2 { 
    
    private String policyNumber;
    private String providerName; 
@@ -19,7 +19,7 @@ public class Policy {
    /* 
       Constructor no-arg
    */ 
-   public Policy() { 
+   public PolicyUpdated2() { 
       policyNumber = "Null";
       providerName = "Null"; 
       fName = "Null"; 
@@ -42,7 +42,7 @@ public class Policy {
       @perma eightInPounds The value to be applied to the weight field 
    */ 
    
-   public Policy(String pNum, String proName, String firstN, String lastN, int howOld, 
+   public PolicyUpdated2(String pNum, String proName, String firstN, String lastN, int howOld, 
                            String smokeStatus, double heightInInches, double weightInPounds) { 
       
       policyNumber = pNum; 
@@ -228,7 +228,25 @@ public class Policy {
          cost+= (bodyMassIndex - 35.0) * 20.0; 
       return cost; 
    }  
-} 
+   
+   /*
+   */ 
+   
+   public String toString2() {
+      String result = "Policy Details:\n";
+      result += "Policy Number: " + policyNumber + "\n";
+      result += "Provider Name: " + providerName + "\n";
+      result += "Policy Holder: " + fName + " " + lName + "\n";
+      result += "Age: " + age + "\n";
+      result += "Smoker Status: " + smokerStatus + "\n";
+      result += "Height (in inches): " + height + "\n";
+      result += "Weight (in pounds): " + weight + "\n";
+      result += "BMI: " + String.format("%.2f", getBMI()) + "\n"; 
+      result += "Insurance Cost: $" + String.format("%.2f", calcInsurenceCost()) + "\n";  
+    
+      return result; 
+   }
+}
   
          
          

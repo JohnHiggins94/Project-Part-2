@@ -1,9 +1,15 @@
 import java.util.Scanner; 
 
-public class PolicyDemoForProjectPart3 { 
+public class PolicyDemoForProjectPart3Updated { 
    public static void main(String[] args) { 
-   
+      
       Scanner scan = new Scanner(System.in); 
+      
+      System.out.println("Enter Height in Inches: "); 
+      double height = scan.nextDouble(); 
+      System.out.println("Enter Weight in Pounds: "); 
+      double weight = scan.nextDouble(); 
+      scan.nextLine(); //Clear Buffer
       System.out.println("Enter Policy Number: "); 
       String pNum = scan.nextLine();
       System.out.println("Enter Provider Name: "); 
@@ -16,17 +22,14 @@ public class PolicyDemoForProjectPart3 {
       int age = scan.nextInt(); 
       System.out.println("Do you Smoke? ('Y' or 'N'"); 
       String smokerStatus = scan.nextLine(); 
-      System.out.println("Enter Hegiht in Inches: "); 
-      double height = scan.nextDouble(); 
-      System.out.println("Enter Weight in Pounds: "); 
-      double weight = scan.nextDouble(); 
+    
       
-      PolicyHolder policyHolderObject1 = new PolicyHolder(pNum, proName, firstN, lastN, howOld, smokeStatus, heightInInches, weightInPounds); 
-      Policy policyObject1 = new Policy(pNum, proName, firstN, lastN, howOld, smokeStatus, heightInInches, weightInPounds); 
+      PolicyHolderUpdated2 policyHolderObject1 = new PolicyHolderUpdated2(pNum, proName, firstN, lastN, age, smokerStatus, height, weight); 
+      PolicyUpdated2 policyObject1 = new PolicyUpdated2(pNum, proName, firstN, lastN, age, smokerStatus, height, weight); 
+      
       
       System.out.println(policyHolderObject1.toString()); 
       
-      System.out.println(policyObject1.toString()); 
+      System.out.println(policyObject1.toString2()); 
    } 
 }
-      

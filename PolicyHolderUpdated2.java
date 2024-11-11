@@ -1,27 +1,27 @@
 /**
 */ 
 
-public class  PolicyHolder { 
+public class PolicyHolderUpdated2 { 
    
       private String policyNum;
       private String provName; 
       private String firstName; 
       private String lastName; 
       private int ageNum; 
-      private String smokeStatus; 
+      private String smokeStatuss; 
       private double h; //height
       private double w; //weight
-      private static int objectCount = 0
+      private static int objectCount = 0;
       
       
-   public Policy() { 
+   public PolicyHolderUpdated2() { 
       policyNum = "Null";
       provName = "Null"; 
       firstName = "Null"; 
       lastName = "Null";
       ageNum = 0;
-      smokeStatus = "Null"; 
-      he = 0.0; 
+      smokeStatuss = "Null"; 
+      h = 0.0; 
       w = 0.0; 
       objectCount++; 
    } 
@@ -38,7 +38,7 @@ public class  PolicyHolder {
       @perma eightInPounds The value to be applied to the weight field 
    */ 
    
-   public PolicyHolder(String pNum, String proName, String firstN, String lastN, int howOld, 
+   public PolicyHolderUpdated2(String pNum, String proName, String firstN, String lastN, int howOld, 
                            String smokeStatus, double heightInInches, double weightInPounds) { 
       
       policyNum = pNum; 
@@ -46,7 +46,7 @@ public class  PolicyHolder {
       firstName = firstN; 
       lastName = lastN; 
       ageNum = howOld; 
-      smokeStatus = smokeStatus; 
+      smokeStatuss = smokeStatus; 
       h = heightInInches;  
       w = weightInPounds;
       objectCount++; 
@@ -122,7 +122,7 @@ public class  PolicyHolder {
    */ 
    
    public String getLName() { 
-      return lasatName; 
+      return lastName; 
    } 
    
    /*
@@ -149,7 +149,7 @@ public class  PolicyHolder {
    */ 
    
    public void setSmokeStatus(String smokerStatus) { 
-      smokeStatus = smokerStatus; 
+      smokeStatuss = smokerStatus; 
    } 
    
    /*
@@ -158,7 +158,7 @@ public class  PolicyHolder {
    */ 
    
    public String getSmokeStatus() { 
-      return smokeStatus; 
+      return smokeStatuss; 
    } 
    
    /*
@@ -201,15 +201,22 @@ public class  PolicyHolder {
    
    public static int getObjectCount() { 
       return objectCount; 
+   } 
    
    /*
       toString method
    */ 
-   
-   public String toString() { 
-      return System.out.printf("\nProvider name: %s\nFirst Name: %s\nLast Name: %s\nAge: %d\nSmoker Status: %s\nHeight: %f\nWeight: %2.f" 
-         ,policyNum ,provName ,firstName ,lastName ,ageNum ,smokeStatus ,h ,w); 
-   } 
+  
+   public String toString() {
+      return "\nProvider name: " + policyNum + 
+           "\nFirst Name: " + provName + 
+           "\nLast Name: " + lastName + 
+           "\nAge: " + ageNum + 
+           "\nSmoker Status: " + smokeStatuss + 
+           "\nHeight: " + h + 
+           "\nWeight: " + w;
+   }
+}
    
    
       
