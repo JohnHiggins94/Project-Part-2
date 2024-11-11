@@ -27,7 +27,7 @@ public class  PolicyHolder {
    } 
    
     /*
-      Constructor for all fields 
+      Constructor for all fields to be add
       @perma pNum The value to be applied to the policyNumber field 
       @perma proName The value to be applied to the providerName field 
       @perma firstN The value to be applied to the fName field 
