@@ -207,7 +207,7 @@ public class  PolicyHolder {
    */ 
    
    public String toString() { 
-      return System.out.printf("\nProvider name: %s\nFirst Name: %s\nLast Name: %s\nAge: %d\nSmoker Status: %s\nHeight: %f\nWeight: %f" 
+      return System.out.printf("\nProvider name: %s\nFirst Name: %s\nLast Name: %s\nAge: %d\nSmoker Status: %s\nHeight: %f\nWeight: %2.f" 
          ,policyNum ,provName ,firstName ,lastName ,ageNum ,smokeStatus ,h ,w); 
    } 
    
